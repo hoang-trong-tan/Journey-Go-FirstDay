@@ -22,14 +22,16 @@ func main() {
 		log.Fatal(err)
 	}
 	r1 := strings.NewReader("First reader \n")
-	r2 := strings.NewReader("second reader \n")
+	// r2 := strings.NewReader("second reader \n")
 
 	if _, err := io.CopyBuffer(os.Stdout, r1, buf); err != nil {
 		log.Fatal(err)
 	}
 
-	if _, err := io.CopyBuffer(os.Stdout, r2, buf); err != nil {
-		log.Fatal(err)
+	zac := 0
+	for zac < 10 {
+		fmt.Println(zac)
+		zac++
 	}
 
 	message := []byte("hello, Gophers!")
