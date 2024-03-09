@@ -74,6 +74,7 @@ func logic() {
 				continue
 			} else {
 				fmt.Println("Your guess correct number ! Congratulations")
+				break
 			}
 		}
 	}
